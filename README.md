@@ -6,7 +6,9 @@ I make web and mobile apps with AI coding tools (mostly Claude Code), and I spen
 Lately I've been interested in the unglamorous parts of AI features: what happens when the input is bad, how a person can override the model, and how you prove it still works after the next change.
 
 Portfolio: https://mishaal-portfolio.vercel.app/
+
 LinkedIn: https://linkedin.com/in/mishaal-noor-132503433
+
 Email: mishaalnoor32@gmail.com
 
 I'm looking for AI assisted development roles and projects.
