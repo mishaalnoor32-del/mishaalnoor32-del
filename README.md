@@ -15,22 +15,67 @@ I'm looking for AI assisted development roles and projects.
 
 ## Baseera
 
-Sep to Nov 2026. I was the QA tester and a developer on a two-person team.
+Sep to Nov 2026. worked as a QA tester and  AI assisted developer on an experience based contract .
 
-Baseera is a rental platform for Pakistan. Instead of sending a field agent to check a property, it runs a Claude vision model and some rule-based checks on the listing, and an admin makes the final decision. My teammate wrote the core pipeline. I tested the platform against a defect list (D01 to D32), then worked on the parts around the model:
+## Baseera
 
-- Locked down how images get fetched: trusted hosts only, 8 second timeout, 6 MB limit, no redirects, and 60 second signed URLs for private CNIC documents.
-- Built the admin side of AI verification: an endpoint for requesting more evidence, an audit log for every AI decision, safe concurrent status updates, and the web and mobile screens that show the risk score, the risk factors and the model's summary.
-- Tested the decision flow (auto-approve, needs review, auto-reject, rerun, admin override) against the thresholds of 25 and 75.
-- Redid the web and mobile UI in React 19 and Expo, and fixed some backend bugs in the TypeScript/Express/Prisma API (payments, agreements, validation).
-- Wrote the QA reports and tested things like stale responses, logout races and expired sessions with Playwright and Jest.
+Sep to Nov 2026. QA tester and developer on a two-person team.
+
+Baseera is a rental platform in Pakistan where owners list properties for tenants. Normally someone from the company would visit each property to check it's real. Baseera does that check with software instead. First it runs simple rule checks, like missing documents, duplicate photos and the photo's GPS location. Then a Claude vision model looks at the property photos and the owner's CNIC (national ID). All of this gives the listing a risk score, and the score decides one of three things: approve it, send it to an admin, or reject it. A real person (the admin) always has the final say.
+
+My teammate built the main verification pipeline. I had two jobs: testing the whole platform, and building the parts around the AI.
+
+**Testing**
+- Checked the platform against a list of 32 known problems (D01 to D32) and kept written QA reports on what was fixed and what was left.
+- Tested every outcome of the AI decision: auto-approve, needs review, auto-reject, run the check again, and admin override. The thresholds for these are 25 and 75, and they can be changed in the config.
+- Tested what happens when things go wrong: old responses arriving late, logging out in the middle of a request, and sessions expiring. I used Playwright for browser tests and Jest for code tests.
+
+**Making the AI part safer**
+- The system downloads images from links, which can be risky. I limited it to trusted sources only, a timeout of 8 seconds, a 6 MB size limit, and no redirects.
+- CNIC photos are private, so they are shared only through signed links that stop working after 60 seconds.
+
+**Admin tools**
+- Built the way an admin can ask the owner for more evidence, using a fixed list of allowed request types.
+- Added a log that records every AI decision, so it's clear what happened and when.
+- Made status updates safe when two people change the same listing at once.
+- Built the web and mobile screens where the admin sees the risk score, the reasons behind it, and the model's summary.
+
+**App and backend work**
+- Redesigned the web and mobile apps (React 19 and Expo) with light and dark themes, different screens for different user roles, a notification bell and a chat panel.
+- Fixed bugs in the backend (TypeScript, Express, Prisma), including payments, agreements, input checks, creating a listing safely when a request is sent twice, and clearer error messages.
+
+Stack: Claude API, TypeScript, Express, Prisma, React 19, Expo, Playwright, Jest
 
 ## Other projects
 
-**FlavorVault** ([demo](https://flavorvault.ai.studio/)) is an offline-first recipe app. It's a PWA with Workbox caching, 133 recipes across 7 categories, filtering, serving size scaling, and a cooking timer based on system timestamps so it doesn't drift. React 19, TypeScript, Tailwind v4, Vite.
+## FlavorVault
 
-**KiddieSpark** ([demo](https://kiddiespark.ai.studio/)) is a learning app for kids aged 2 to 8, with phonics, counting, stories, tracing, coloring and shape matching. The tracing screen scores your strokes live on a canvas. I put effort into accessibility too: contrast, large touch targets, reduced motion and screen reader support. React, TypeScript, Canvas, Web Speech API.
+A recipe app that works offline and can be installed on a phone like a normal app. I built it with AI coding tools and directed the development.
 
+Live demo: https://flavorvault.ai.studio/
+
+What I decided and designed:
+- The recipe data. I designed a dataset of 133 recipes in 7 categories, with quantities in a consistent format, nutrition info, tags and the time for each step. This is what lets the app filter by several things at once and scale ingredients when you change the servings.
+- The data is structured so an AI feature could be added later.
+- How the cooking timer should behave: it uses the system clock so it doesn't drift, it can be paused and adjusted, and it gives a chime and vibration at the end.
+- That preferences, favorites, collections and checklists are saved between visits.
+
+Tools used: React 19, TypeScript, Tailwind CSS v4, Vite 6, Workbox.
+
+## KiddieSpark
+
+A learning app for kids aged 2 to 8 that can be installed on a phone. It has phonics, counting, read-along stories, tracing, coloring and shape matching. I built it with AI coding tools and directed the development.
+
+Live demo: https://kiddiespark.ai.studio/
+
+What I decided and asked for:
+- The six learning modules and that it should be mobile-first.
+- A tracing screen that scores a child's stroke right away.
+- Read-aloud stories with an auto-read switch that can be turned off, for children who find sound too much.
+- Accessibility from the start: good colour contrast, large touch targets, reduced-motion support and screen reader support.
+- Safe saving of progress, with a fallback if the browser blocks storage.
+
+Tools used: React, TypeScript, Tailwind CSS, Motion, HTML5 Canvas.
 ## Stack
 
 Python, C++, TypeScript, JavaScript, Dart
