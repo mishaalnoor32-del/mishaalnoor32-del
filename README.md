@@ -48,7 +48,7 @@ Stack: Claude API, TypeScript, Express, Prisma, React 19, Expo, Playwright, Jest
 
 ## Other projects
 
-## FlavorVault
+## FlavorVault:
 
 A recipe app that works offline and can be installed on a phone like a normal app. I built it with AI coding tools and directed the development.
 
