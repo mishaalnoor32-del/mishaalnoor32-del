@@ -17,7 +17,7 @@ I'm looking for AI assisted development roles and projects.
 
 Sep to Nov 2026. worked as a QA tester and  AI assisted developer on an experience based contract .
 
-## Baseera
+## Baseera:
 
 Sep to Nov 2026. QA tester and developer on a two-person team.
 
