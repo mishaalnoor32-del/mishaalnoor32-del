@@ -62,7 +62,7 @@ What I decided and designed:
 
 Tools used: React 19, TypeScript, Tailwind CSS v4, Vite 6, Workbox.
 
-## KiddieSpark
+## KiddieSpark:
 
 A learning app for kids aged 2 to 8 that can be installed on a phone. It has phonics, counting, read-along stories, tracing, coloring and shape matching. I built it with AI coding tools and directed the development.
 
