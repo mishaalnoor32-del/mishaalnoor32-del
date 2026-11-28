@@ -27,7 +27,7 @@ My teammate built the main verification pipeline. I had two jobs: testing the wh
 
 **Testing**
 - Checked the platform against a list of 32 known problems (D01 to D32) and kept written QA reports on what was fixed and what was left.
-- Tested every outcome of the AI decision: auto-approve, needs review, auto-reject, run the check again, and admin override. The thresholds for these are 25 and 75, and they can be changed in the config.
+- Verified every AI decision state—auto-approve, needs review, auto-reject, re-evaluation, and admin override—ensuring accurate routing across configurable confidence thresholds.
 - Tested what happens when things go wrong: old responses arriving late, logging out in the middle of a request, and sessions expiring. I used Playwright for browser tests and Jest for code tests.
 
 **Making the AI part safer**
