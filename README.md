@@ -1,6 +1,6 @@
 # Mishaal Noor
 
-I'm a CS student at the PU Lahore.
+I'm a CS student at  PU Lahore.
 I make web and mobile apps with AI coding tools (mostly Claude Code , antigravity etc), and I spend a lot of my time testing what comes out.
 
 Lately I've been interested in the unglamorous parts of AI features: what happens when the input is bad, how a person can override the model, and how you prove it still works after the next change.
