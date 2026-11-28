@@ -76,7 +76,7 @@ What I decided and asked for:
 - Safe saving of progress, with a fallback if the browser blocks storage.
 
 Tools used: React, TypeScript, Tailwind CSS, Motion, HTML5 Canvas.
-## Stack
+## Stack:
 
 Python, C++, TypeScript, JavaScript, Dart
 React, React Native / Expo, Flutter, Tailwind CSS
