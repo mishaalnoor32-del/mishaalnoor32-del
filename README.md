@@ -17,7 +17,7 @@ I'm looking for AI assisted development roles and projects.
 
 Sep to Nov 2026. worked as a QA tester and  AI assisted developer on an experience based contract .
 
-## Baseera:
+## Baseera
 
 Sep to Nov 2026. QA tester and developer on a two-person team.
 
@@ -48,7 +48,7 @@ Stack: Claude API, TypeScript, Express, Prisma, React 19, Expo, Playwright, Jest
 
 ## Other projects
 
-## FlavorVault:
+## FlavorVault
 
 A recipe app that works offline and can be installed on a phone like a normal app. I built it with AI coding tools and directed the development.
 
@@ -62,7 +62,7 @@ What I decided and designed:
 
 Tools used: React 19, TypeScript, Tailwind CSS v4, Vite 6, Workbox.
 
-## KiddieSpark:
+## KiddieSpark
 
 A learning app for kids aged 2 to 8 that can be installed on a phone. It has phonics, counting, read-along stories, tracing, coloring and shape matching. I built it with AI coding tools and directed the development.
 
@@ -76,7 +76,7 @@ What I decided and asked for:
 - Safe saving of progress, with a fallback if the browser blocks storage.
 
 Tools used: React, TypeScript, Tailwind CSS, Motion, HTML5 Canvas.
-## Stack:
+## Stack
 
 Python, C++, TypeScript, JavaScript, Dart
 React, React Native / Expo, Flutter, Tailwind CSS
